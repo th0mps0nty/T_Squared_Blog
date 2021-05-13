@@ -1,18 +1,20 @@
 module.exports = {
   siteMetadata: {
     title: 'T Squared Inc',
-    description: 'My Personal Blog - Maybe',
+    description: 'My Personal Blog',
     twitter: 'TheRealTylerThompson2',
+    creator: 'Tyler Thompson',
   },
   plugins: [
-    'gatsby-plugin-mdx',
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'pages',
-        path: './src/pages/',
+        path: `${__dirname}/posts`,
+        name: `posts`,
       },
-      __key: 'pages',
+      // __key: `posts`,
     },
+    `gatsby-plugin-mdx`,
   ],
 }

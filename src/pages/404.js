@@ -28,9 +28,12 @@ const codeStyles = {
 // markup
 const NotFoundPage = () => {
   return (
-    <Layout>
-      <div>The big empty. This page does not exist.</div>
-    </Layout>
+    <>
+      <Layout>
+        <div>The big empty. This page does not exist.</div>
+      </Layout>
+      <Link to='/'>Home</Link>
+    </>
   )
 }
 

@@ -10,7 +10,8 @@ const SEO = ({ title, description, meta = [] }) => {
           siteMetadata {
             description
             title
-            // creator
+            twitter
+            creator
           }
         }
       }
@@ -18,10 +19,10 @@ const SEO = ({ title, description, meta = [] }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+
   return (
     <Helmet
       title={title}
-      description={description}
       htmlAttributes={{ lang: `en` }}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
@@ -46,7 +47,7 @@ const SEO = ({ title, description, meta = [] }) => {
           content: title,
         },
         {
-          property: `twitter:creater`,
+          property: `twitter:creator`,
           content: site.siteMetadata.twitter || ``,
         },
         {
