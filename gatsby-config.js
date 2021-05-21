@@ -16,5 +16,12 @@ module.exports = {
       // __key: `posts`,
     },
     `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-theme-ui`,
+      options: {
+        preset: `@theme-ui/preset-dark`,
+        prismPreset: `prism-okaidia`,
+      },
+    },
   ],
 }

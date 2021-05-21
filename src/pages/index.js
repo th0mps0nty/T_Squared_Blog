@@ -1,4 +1,6 @@
-import * as React from 'react'
+/** @jsx jsx */
+import { jsx, Box } from 'theme-ui'
+// import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import { graphql, Link } from 'gatsby'
@@ -10,9 +12,11 @@ const IndexPage = ({ data }) => {
       <SEO title={`Home Page`} />
       {posts.map((post) => {
         return (
-          <Link to={post.slug} key={post.slug}>
-            <h2>{post.frontmatter.title}</h2>
-          </Link>
+          <Box>
+            <Link to={post.slug} key={post.slug}>
+              <h2>{post.frontmatter.title}</h2>
+            </Link>
+          </Box>
         )
       })}
     </Layout>
