@@ -1,22 +1,22 @@
 /** @jsx jsx */
-import { jsx, Box } from 'theme-ui'
+import { jsx } from 'theme-ui'
 // import React from 'react'
 import { Link } from 'gatsby'
 
 const bodyStyles = {
-  px: 3, // padding-left & padding-right
-  // paddingX: 3 will also work
-  py: 4, // padding-top & padding-bottom
-  mb: 3, // margin-bottom
+  mx: `2rem`,
+  padding: `1rem`,
 }
 
 const headerStyles = {
-  textAlign: `left`,
-  background: `bluegrey`,
+  paddingLeft: `10px`,
 }
 
 const mainStyles = {
-  alignItems: `center`,
+  maxWidth: `container`,
+  padding: `1rem`,
+  mx: `auto`,
+  textAlign: `center`,
 }
 
 const footerStyles = {
@@ -29,9 +29,7 @@ const Layout = ({ children }) => {
     <div sx={bodyStyles}>
       <header sx={headerStyles}>
         <nav>
-          <Box p={4} bg='highlight'>
-            <Link to='/'>Home</Link>
-          </Box>
+          <Link to='/'>Home</Link>
         </nav>
       </header>
       <main sx={mainStyles}>{children}</main>
